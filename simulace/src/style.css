@@ -1,0 +1,31 @@
+#myCanvas {
+  border: 1px solid black;
+}
+
+#elements-div {
+    display: inline-flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+#element-adder {
+  margin-top: 10px;
+}
+
+#preset-selector {
+  margin-top: 10px;
+}
+
+#rays-div {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.element-container {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+
+    display: inline-flex;
+    flex-direction: column;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ray optics transfer matrix simulation</title>
+    <script src="src/optics.js"></script>
+    <script src="src/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+</head>
+<body>
+    <h1>Ray optics transfer matrix simulation</h1>
+    
+    <canvas width="500px" height="250px" id="myCanvas"></canvas>
+
+    <div id="preset-selector">
+        <label for="preset">Preset:</label>
+        <select id="preset">
+            <option value="achromat">Achromatic lens</option>
+            <option value="protar">Zeiss Protar</option>
+            <option value="empty">Empty</option>
+        </select>
+        <button onclick="loadPreset(document.getElementById('preset').value)">Load</button>
+    </div>
+
+    <div id="element-adder">
+        <label for="opticalElement">Optical Element:</label>
+        <select id="opticalElement">
+            <option value="thinLens">Thin lens</option>
+            <option value="thickLens">Thick lens</option>
+            <option value="flatRefraction">Flat refraction</option>
+            <option value="curvedRefraction">Curved refraction</option>
+        </select>
+        <button onclick="createOpticalElement(document.getElementById('opticalElement').value)">Add</button>
+    </div>
+
+    <div id="elements-div"></div>
+
+    <div id="ray-adder">
+        <label for="rayAngle">Rays:</label>
+        <button onclick="addRay(0, 0)">Add</button>
+    </div>
+
+    <div id="rays-div"></div>
+</body>
+</html>
